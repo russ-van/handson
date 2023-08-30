@@ -8,7 +8,24 @@
 </head>
 <body>
     
+    Idade <input type="text" id="idade">
+    <button onclick="validaIdade()">Verificar</button>
 
-    
+    <script>
+
+function validaIdade(){
+
+    var idade = document.getElementById("idade").value;
+    if (idade>=18){
+        alert("Maior de idade!")
+
+    }else{
+        alert("Menor de idade!")
+    }
+
+}
+
+    </script>
+
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands On 05</title>
+</head>
+
+<body>
+
+    <H1>Hands On 05</H1>
+    <p>Considerando o software anterior faça um aplicativo handson5.html que mostre se o número é positivo, negativo ou
+        nulo.</p>
+
+    Digite um número: <input type="number" id="numero">
+    <button onclick="resultadoN()">Verificar</button>
+
+    <script>
+
+        function resultadoN() {
+
+            var numero = parseInt(document.getElementById("numero").value);
+
+            if (numero > 0) {
+
+                alert(`O número ${numero} é positivo!`)
+
+            } else if (numero < 0) {
+
+                alert(`O número ${numero} é negativo!`)
+
+            } else {
+
+                alert("O número é nulo.")
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
