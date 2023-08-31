@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands On 07</title>
+</head>
+
+<body>
+
+    <h1>Hands On 07</h1>
+    <p>Crie um algoritmo que calcule a média de duas notas de um aluno. Verificar se o aluno está aprovado ou reprovado.
+        Acima de 7 aprovado e abaixo reprovado.</p>
+    <p>______________________________________________________________________________________________________________________________
+    </p>
+
+    Digite a primeira nota: <input type="number"  id="nota1"> <br><br>
+    Digite a segunda nota: <input type="number" id="nota2"> <br><br>
+
+    <button onclick="verificarAp()">Verificar Aprovação</button>
+
+    <script>
+        
+        function verificarAp() {
+            var nota1 = parseFloat(document.getElementById("nota1").value)
+            var nota2 = parseFloat(document.getElementById("nota2").value)
+            var media = (nota1 + nota2) / 2;
+
+            if (media >= 7) {
+
+                alert(`A média do aluno é ${media}. O aluno está Aprovado! ✅`)
+                
+            } else {
+
+                alert(`A média do aluno é ${media}. O aluno está Reprovado! ❌`)
+                
+            }
+            
+        }
+
+    </script>
+
+</body>
+
+</html>
