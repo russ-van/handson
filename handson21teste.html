@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands On 21</title>
+</head>
+
+<body>
+
+    <h1>Hands On 21</h1> <br><br>
+    <h2>Contador:</h2>
+    <button onclick="fazerContagem()">Inciar contador</button>
+    <h3 style="font-size: 500%;" id="contador">0</h3>
+
+    <script>
+
+        function fazerContagem() {
+
+            var exibirContador = document.getElementById("contador");
+            var contador = 0;
+
+            function atualizarContador() {
+                exibirContador.textContent = contador;
+            }
+            atualizarContador();
+
+            var intervalo = setInterval(function () {
+                contador++;
+
+                if (contador >= 10) {
+                    clearInterval(intervalo);
+                }
+
+                atualizarContador();
+            }, 1000); // Atualização em 1000 milissegundos
+        };
+
+
+    </script>
+</body>
+
+</html>

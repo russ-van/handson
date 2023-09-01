@@ -10,26 +10,44 @@
 
 <body>
 
-    <H1>Hands On 10</H1>
-    <p style="font-size: 150%;">Crie um algoritmo que calcule Raiz quadrada de um número qualquer.</p>
+    <H1 style="color: rgb(2, 165, 89);">Hands On 10</H1>
+    <p style="font-size: 150%;">Crie um algoritmo que calcule Raiz Quadrada de um número qualquer.</p>
     <p>_______________________________________________________________________________________</p>
 
-    <label for="numero" style="font-size: 110%;">Digite um número:</label>
-    <input type="numer" id="numero" min="0" placeholder="Raiz Quadrada">
+    <label for="numero" style="font-size: 110%;">Digite um número positivo: √</label>
+    <input type="numer" id="numero" placeholder="Raiz Quadrada">
     <button onclick="calcularRaiz()">Resultado</button>
     <h3>Resultado:</h3>
     <h3 id="resultado"></h3>
 
     <script>
         function calcularRaiz() {
-            var numero = parseInt(document.getElementById("numero").value);
-            var raiz = numero ** 0.5
+            var numero = document.getElementById("numero").value;
             var resultadoM;
-            // var raiz = Math.sqrt(numero);
 
-            //alert(`A raiz quadrada de ${numero} é ${raiz}.`)
-            resultadoM = "A raiz quadrada de " + numero + " é " + raiz + ". ";
-            document.getElementById("resultado").textContent = resultadoM
+            if (isNaN(numero) || numero ==="") {
+
+                alert(`Digite um número!`)
+                resultadoM = "⚠️ Nenhum número foi digitado.";
+                document.getElementById("resultado").textContent = resultadoM
+                return;
+            }else if(numero<0){
+
+                resultadoM = "⛔ Não é possível extrair raiz quadrada de um número negativo!!!";
+                document.getElementById("resultado").textContent = resultadoM
+                return;
+            }
+
+            var raiz = parseFloat(numero) ** 0.5
+            
+            if (raiz % 1 === 0) {
+                //alert(`A raiz quadrada de ${numero} é ${raiz}.`)
+                resultadoM = "✅ A raiz quadrada de √ " + numero + " é " + raiz + ". ";
+                document.getElementById("resultado").textContent = resultadoM
+            } else {
+                resultadoM = "✅ A raiz quadrada de √ " + numero + " é um número decimal e foi abreviada para " + raiz.toFixed(2) + ". ";
+                document.getElementById("resultado").textContent = resultadoM
+            }
         }
 
     </script>
