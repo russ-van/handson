@@ -36,6 +36,12 @@
                 resultadoM = "⛔ Não é possível extrair raiz quadrada de um número negativo!!!";
                 document.getElementById("resultado").textContent = resultadoM
                 return;
+            }else if(numero==0){
+
+                resultadoM = "⚠️ O número Zero é nulo.";
+                document.getElementById("resultado").textContent = resultadoM
+                return;
+
             }
 
             var raiz = parseFloat(numero) ** 0.5 //Outra forma é pela função Math.sqrt()
